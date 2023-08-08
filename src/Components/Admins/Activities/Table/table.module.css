@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 90%;
+  width: 100%;
   min-height: 300px;
   max-height: 500px;
   overflow-y: auto;
@@ -17,17 +17,23 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 90%;
+  width: 100%;
   min-height: 300px;
   max-height: 500px;
   overflow-y: auto;
-  background-color: #302c30;
 }
 
-.darkTableContainer .table, .table {
-    width: 90vw;
-    border-spacing: 0 5px;
-    margin: auto;
+.table {
+  width: 90vw;
+  border-spacing: 0 5px;
+  margin: auto;
+}
+
+.darkTableContainer .table {
+  width: 90vw;
+  border-spacing: 0 5px;
+  margin: auto;
+  transition: background-color 1s;
 }
 
 .tableHeader th {
@@ -35,6 +41,7 @@
   top: 0;
   padding-bottom: 5px;
   background-color: #fff;
+  transition: background-color 1s;
 }
 
 .darkTableContainer .tableHeader th {
@@ -42,6 +49,7 @@
   top: 0;
   padding-bottom: 5px;
   background-color: #302c30;
+  transition: background-color 1s;
 }
 
 .darkTableContainer .tableHeader {
@@ -49,21 +57,18 @@
 }
 
 .filterContainer {
+  align-self: flex-start;
   display: flex;
 }
 
 .inputContainer {
   display: flex;
   flex-direction: column;
-  margin-left: 5%;
-  margin-bottom: 1%;
 }
 
 .darkInputContainer {
   display: flex;
   flex-direction: column;
-  margin-left: 5%;
-  margin-bottom: 1%;
   color: #ffffff;
 }
 
@@ -72,9 +77,10 @@
 }
 
 .darkInputContainer input {
-  background-color: #242024;
-  color: #fff;
   width: 250px;
+  background-color: #242024;
+  transition: background-color 1s;
+  color: #fff;
 }
 
 .darkInputContainer ::placeholder {
@@ -84,7 +90,6 @@
 .inputContainer label {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1%;
 }
 
 .inputContainer input {
@@ -162,6 +167,7 @@
 
 .row:not(.selected):nth-child(odd) {
   background-color: #ffffff;
+  transition: background-color 1s;
 }
 
 .row:not(.selected):nth-child(odd):hover {
@@ -170,19 +176,22 @@
 
 .row:not(.selected):nth-child(even) {
   background-color: #ebebeb;
+  transition: background-color 1s;
 }
 
 .row:not(.selected):nth-child(even):hover {
   background-color: #c0b6b6;
 }
 
-.darkTableContainer .row:not(.selected):nth-child(odd) {
+.darkTableContainer .row:not(.selected):nth-child(even) {
   background-color: #19191b;
+  transition: background-color 1s;
   color: #fff;
 }
 
-.darkTableContainer .row:not(.selected):nth-child(even) {
+.darkTableContainer .row:not(.selected):nth-child(odd) {
   background-color: #302c30;
+  transition: background-color 1s;
 }
 
 .spanTrainer::before {
