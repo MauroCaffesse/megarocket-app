@@ -82,6 +82,7 @@
   margin-bottom: 5%;
   padding: 2% 0;
   background-color: #dedeef93;
+  border-radius: 1.5rem;
 }
 
 .feature {
@@ -184,8 +185,7 @@
   box-shadow: 2px 2px 4px #00000033;
   text-align: center;
   overflow: hidden;
-  transition: transform 0.3s ease;
-  transition: background-color 1s;
+  transition: transform 0.3s ease, background-color 1s;
 }
 
 .darkLanding .membershipCard {
@@ -201,8 +201,7 @@
   box-shadow: 2px 2px 4px #8d8d8d33;
   text-align: center;
   overflow: hidden;
-  transition: transform 0.3s ease;
-  transition: background-color 1s;
+  transition: transform 0.3s ease, background-color 1s;
 }
 
 .membershipCard:hover {
