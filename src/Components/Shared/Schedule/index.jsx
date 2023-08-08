@@ -56,6 +56,12 @@ const Schedule = () => {
   const weekDate = Array.from({ length: 6 }, (_, index) =>
     format(addDays(startOfWeek(new Date(), { weekStartsOn: 1 }), index), 'yyyy-MM-dd')
   );
+  const weekDateWithOneDayAdded = Array.from({ length: 6 }, (_, index) =>
+    format(addDays(new Date(startOfWeek(new Date(), { weekStartsOn: 1 })), index + 1), 'yyyy-MM-dd')
+  );
+  const nextWeekDaysWithOneDayAdded = Array.from({ length: 6 }, (_, index) =>
+    format(addDays(new Date(startOfWeek(new Date(), { weekStartsOn: 1 })), index + 8), 'yyyy-MM-dd')
+  );
   const hours = [];
   for (let i = 9; i <= 21; i++) {
     hours.push(i.toString().padStart(2, '0') + ':00');
@@ -288,20 +294,20 @@ const Schedule = () => {
                               current.date === weekDate[index] ? (
                                 <>
                                   <div className={styles.currentDate}>{day.slice(0, 3)}</div>
-                                  <div className={styles.currentDate}>
-                                    {new Date(weekDate[index]).getDate() + 1}
-                                  </div>
+                                  <div>{format(new Date(weekDateWithOneDayAdded[index]), 'd')}</div>
                                 </>
                               ) : (
                                 <>
                                   <div>{day.slice(0, 3)}</div>
-                                  <div> {new Date(weekDate[index]).getDate() + 1} </div>
+                                  <div>{format(new Date(weekDateWithOneDayAdded[index]), 'd')}</div>
                                 </>
                               )
                             ) : (
                               <>
                                 <div>{day.slice(0, 3)}</div>
-                                <div> {new Date(nextWeekDays[index]).getDate() + 1} </div>
+                                <div>
+                                  {format(new Date(nextWeekDaysWithOneDayAdded[index]), 'd')}
+                                </div>
                               </>
                             )}
                           </th>
