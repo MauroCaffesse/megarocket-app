@@ -17,7 +17,7 @@ const NavBar = ({ routes = [], showMenu, setShowMenu }) => {
       <nav className={`${styles.navbar} ${!showMenu ? styles.hidden : ''}`}>
         <ul className={styles.routes} data-testid="routes-list">
           {privateRoutes.map((route) => (
-            <li key={route.name}>
+            <li key={route.name} className={styles.liNav}>
               <NavLink
                 activeClassName={styles.activeLink}
                 className={styles.a}

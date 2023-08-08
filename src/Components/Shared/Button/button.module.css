@@ -61,7 +61,7 @@
   height: 1.35rem;
   color: #fdfdfd;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .button {
     width: 5rem;
     height: 2.5rem;

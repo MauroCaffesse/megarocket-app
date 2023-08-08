@@ -71,6 +71,7 @@
 .form {
   display: flex;
   flex-direction: column;
+  width: 100%;
   padding: 10px 20px;
   font-family: 'Roboto', Arial, serif;
   font-size: 17px;

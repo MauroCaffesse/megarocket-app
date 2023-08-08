@@ -6,7 +6,6 @@
 
 .darkContainer {
   min-height: 50vh;
-  background-color: #302c30;
   transition: background-color 1s;
 }
 
@@ -56,17 +55,6 @@
   max-width: 1000px;
   margin: 0 auto;
   border-collapse: collapse;
-}
-
-.thead {
-  background-color: #d9d9d9;
-  transition: background-color 1s;
-}
-
-.darkContainer .thead {
-  background-color: #19191b;
-  transition: background-color 1s;
-
 }
 
 .th {

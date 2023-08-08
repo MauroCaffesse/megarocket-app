@@ -31,12 +31,18 @@ function Activities() {
   }
   return (
     <section className={styles.activitySection}>
-      <h2 className={!dark ? styles.title : styles.darkTitle}>Activities</h2>
-      {list.length !== 0 ? <Table /> : 'There are not activities yet, add new ones!!'}
-      <div className={styles.button}>
-        <Link to={'activities/add'} data-testid="add-activity-link">
-          <Button text={'+ Add new'} classNameButton={'addButton'} />
-        </Link>
+      <div className={!dark ? styles.container : styles.darkContainer}>
+        <h2 className={styles.title}>Activities</h2>
+        {list.length !== 0 ? (
+          <Table />
+        ) : (
+          <p className={styles.paragraph}>There are not activities yet, add new ones</p>
+        )}
+        <div className={styles.button}>
+          <Link to={'activities/add'} data-testid="add-activity-link">
+            <Button text={'+ Add new'} classNameButton={'addButton'} />
+          </Link>
+        </div>
       </div>
       {show && (
         <ResponseModal

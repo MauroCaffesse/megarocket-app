@@ -124,10 +124,10 @@ function Landing() {
               }
         }
       >
-        <h1 className={styles.brandName}>MegaRocket Web</h1>
+        <h1 className={styles.brandName}>MEGAROCKET GYM</h1>
         <p className={styles.brandDescription}>
-          Mega Rocket web is a monthly management system for members and trainers to dynamically
-          manage their activities in the gym.
+          Welcome to our Megarocket Gym! Achieve your fitness goals with personalized workouts,
+          expert guidance, and a supportive community. Lets get fit together!
         </p>
 
         <button className={styles.button} onClick={handleClick}>
